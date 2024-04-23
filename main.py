@@ -11,9 +11,9 @@ if __name__ == '__main__':
     lib.arr_num_checks(arr_1_size, 0)
     arr_1_size = int(arr_1_size)
     # populates arr_1 with user inputs
-    arr_1_inputs = lib.get_arr_nums(arr_1_size)
+    arr_1 = lib.get_arr_nums(arr_1_size)
     # prints user inputs
-    print("Array 1 = " + str(arr_1_inputs))
+    print("Array 1 = " + str(arr_1))
 
     # array 2
     # gets array size from user
@@ -26,3 +26,18 @@ if __name__ == '__main__':
     # prints user inputs
     print("Array 2 = " + str(arr_2))
 
+    # bubble sort first array
+    arr_1 = lib.bubble_sort(arr_1)
+    print("Array 1 sorted in ascending order using bubble sort: " + str(arr_1))
+
+    # selection sort second array
+    arr_2 = lib.selection_sort(arr_2)
+    print("Array 2 sorted in ascending order using selection sort: " + str(arr_2))
+
+    # merge arrays
+    arr_3 = lib.merge(arr_1, arr_2)
+    print("Array 1 and array 2 merged to make array 3, which is merged and sorted in ascending order using merge: " + str(arr_3))
+
+    # binary search with random target
+    target_ind = lib.binary_search(arr_3)
+    print("The target was found at the index of: " + str(target_ind))
