@@ -20,7 +20,7 @@ def arr_num_checks(input, case):
 
     # case that is called when function is used for the array size checker
     if case == 0:       
-        if 0 > x or x > 31:  # checks if array size was inputted as less than 0 or greater than 30
+        if 0 > x or x > 30:  # checks if array size was inputted as less than 0 or greater than 30
             print("Array size is invalid, please enter a number from 1-30 inclusive.")
             sys.exit(0)
         else:           # valid array size number
