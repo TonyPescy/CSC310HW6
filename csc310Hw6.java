@@ -13,7 +13,8 @@ public class csc310Hw6 {
 
         Scanner scan = new Scanner(System.in); // scanner object for user inputs
 
-        // getting array1 
+        // getting array1
+        System.out.println(" ");    // quality of life give whitespace in terminal
         System.out.println(ARR_1_PROMPT);   // prints prompt
         int arr1Size = scan.nextInt(); // gets user input
         boolean numCheck = jvLibrary.arrNumChecks(arr1Size);    // checks if valid array size was inputted by user
