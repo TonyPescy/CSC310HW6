@@ -76,7 +76,7 @@ public class csc310Hw6 {
         // selectionSort array2
         array2 = jvLibrary.selectionSort(array2); // selectionSorts array2
         // prints sorted array2
-        System.out.print("Array 2 sorted with bubbleSort: ");
+        System.out.print("Array 2 sorted with selectionSort: ");
         for (int i = 0; i < array2.length; i++) {
             System.out.print(array2[i] + " ");
         }
@@ -84,9 +84,24 @@ public class csc310Hw6 {
         // selectionSort array2 done
 
         // merge arrays
+        int[] arrayM = new int[array1.length + array2.length - 1];  // creates merged array with size of sum of both user arrays
+        arrayM = jvLibrary.merge(array1, array2);   // merges and sorts array1 and array2 into arrayM
+        // prints sorted merged array
+        System.out.print("Merged array: ");
+        for (int i = 0; i < arrayM.length; i++) {
+            System.out.print(arrayM[i] + " ");
+        }
+        System.out.println(" ");    // adds new line
+        // merge arrays done
 
         // binarySearch with random target
-
+        int targetIndex = jvLibrary.binarySearch(arrayM); // binary searches for target and assigns index to variable
+        if (targetIndex == -1) {    // error with binary search
+            System.out.println("Error with binary search, please try again.");
+            System.exit(0);
+        } else {    // binary search succeeded
+            System.out.println("The target was found at the index of: " + targetIndex); // prints out target index
+        }
 
         scan.close();   // closes scanner
     }
